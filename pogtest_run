@@ -1,0 +1,16 @@
+ if [[ -n $1 ]]; then
+        if [[ -z $2 ]]; then
+                g++ -Wall -pedantic $1
+                CODE=$?
+                FILENAME="a.out"
+        else
+                g++ -Wall -pedantic $1 -o $2
+                CODE=$?
+                FILENAME=$2
+        fi
+        if [[ $CODE == 0 ]]; then
+                ./$FILENAME
+        fi
+else
+echo "Chybí soubor ke kompilaci"
+fi
