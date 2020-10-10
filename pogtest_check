@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+
+PROG=./a.out
+for IN_FILE in CZE/*_in.txt; do
+  REF_FILE=`echo -n $IN_FILE | sed -e 's/_in\(.*\)$/_out\1/'`
+  $PROG < $IN_FILE > output.txt
+  if ! diff $REF_FILE output.txt; then
+    echo "Fail: $IN_FILE";
+    exit
+  else
+    echo "OK: $IN_FILE";
+    fi
+done
