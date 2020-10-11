@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pogtest_compile $1
+pogtest_check
