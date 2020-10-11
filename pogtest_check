@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+pogtest_compile $1
 PROG=./a.out
 for IN_FILE in CZE/*_in.txt; do
   REF_FILE=`echo -n $IN_FILE | sed -e 's/_in\(.*\)$/_out\1/'`
