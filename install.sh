@@ -7,3 +7,4 @@ sudo curl -o "$CESTA"/pogtest_compile "https://raw.githubusercontent.com/lukastr
 sudo chmod +x "$CESTA"/pogtest_compile;
 sudo curl -o "$CESTA"/pogtest_run "https://raw.githubusercontent.com/lukastrkan/pogtest_scripty/main/pogtest_run";
 sudo chmod +x "$CESTA"/pogtest_run;
+
